@@ -63,6 +63,6 @@
     ]
   },
   "dependencies": {
-    "class-fixtures-factory": "github:throneless-tech/class-fixtures-factory#maxdepth"
+    "class-fixtures-factory": "github:throneless-tech/class-fixtures-factory"
   }
 }

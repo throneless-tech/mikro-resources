@@ -8,14 +8,14 @@ import {
 } from 'class-fixtures-factory';
 import { MetadataStore } from './MetadataStore';
 import { MikroORM, EntityName, Utils, Collection } from '@mikro-orm/core';
-import { DeepPartialEntity, EntityClass } from '@mikro-orm/core/dist/typings';
+import { DeepPartial, EntityClass } from '@mikro-orm/core/typings';
 
 export interface FactoryResult<T> {
   one: () => T;
   many: (x: number) => T[];
   oneAndPersist: () => Promise<T>;
   manyAndPersist: (x: number) => Promise<T[]>;
-  with: (input: DeepPartialEntity<T>) => FactoryResult<T>;
+  with: (input: DeepPartial<T>) => FactoryResult<T>;
   ignore: (...props: (keyof T)[]) => FactoryResult<T>;
 }
 
